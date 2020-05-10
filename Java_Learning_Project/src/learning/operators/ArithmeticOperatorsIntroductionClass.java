@@ -100,7 +100,7 @@ public class ArithmeticOperatorsIntroductionClass
 		//Divide One Integral Value By Another Integral Value
 		int i5 = 15, i6 = 28;
 		System.out.println("Division of One Integral Value By Another Integral Value is : " + (i5 / i6));
-		//Division Result Being Implicitly Converted to Double Variable While Storing
+		//Integral Division Result Being Implicitly Converted to Double Variable While Storing
 		double d3 = i5 / i6;
 		System.out.println("Division of One Integral Value By Another Integral Value Stored in Double Variable is : " + d3);
 		//Actual Floating-Point Result of Division of One Integral Value By Another Integral Value Stored in Double Variable
@@ -130,7 +130,7 @@ public class ArithmeticOperatorsIntroductionClass
 		
 		//Divide One Integral Value By One Character Value
 		System.out.println("Division of One Integral Value By One Character Value is : " + (i6 / c6));
-		//Division Result Being Implicitly Converted to Double Variable While Storing
+		//Integral Division Result Being Implicitly Converted to Double Variable While Storing
 		double d8 = i6 / c6;
 		System.out.println("Division of One Integral Value By One Character Value Stored in Double Variable is : " + d8);
 		//Actual Floating-Point Result of Division of One Integral Value By One Character Value Stored in Double Variable
@@ -139,7 +139,7 @@ public class ArithmeticOperatorsIntroductionClass
 		
 		//Divide One Character Value By One Integral Value
 		System.out.println("Division of One Character Value By One Integral Value is : " + (c5 / i5));
-		//Division Result Being Implicitly Converted to Double Variable While Storing
+		//Integral Division Result Being Implicitly Converted to Double Variable While Storing
 		double d10 = c5 / i5;
 		System.out.println("Division of One Character Value By One Integral Value Stored in Double Variable is : " + d10);
 		//Actual Floating-Point Result of Division of One Character Value By One Integral Value Stored in Double Variable
