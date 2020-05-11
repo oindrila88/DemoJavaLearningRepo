@@ -4,7 +4,7 @@ public class LoopsIntroductionClass
 {
 	public static void main(String[] args)
 	{
-		//Iteration Control Statements
+		//Iteration / Looping Control Statements - Statements that execute a block of code repeatedly until a specified condition is met
 		//To perform same task repeatedly in Java, Iteration block, i.e., Loops are used
 		//In java, 4 types of Loops are available - 1. While 2. Do-While 3. For 4. ForEach
 		//Any Loop has three parts - A. Initialization B. Condition C. Increment

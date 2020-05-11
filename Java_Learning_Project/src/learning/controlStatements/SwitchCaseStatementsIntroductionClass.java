@@ -4,7 +4,7 @@ public class SwitchCaseStatementsIntroductionClass
 {
 	public static void main(String[] args)
 	{
-		/* Selection Control Statements */
+		/* Decision-Making / Control Flow Statements */
 		/* Switch-Case Statement */
 		//To check Multiple Conditions in an efficient manner without using Multiple If-Else Statement, Switch-Case Statement is used
 		//Switch block takes implicitly convertible Int values, Strings (Java 1.7 onwards) or Enum variables

@@ -4,15 +4,15 @@ public class IfElseElseIfStatementsIntroductionClass
 {
 	public static void main(String[] args)
 	{
-		/* Selection Control Statements */
-		/* Simple If Statement for Single Condition check (Only True) */
+		//Decision-Making / Control Flow Statements - Statements that determine which statement to execute and when. The flow of the execution of the program is controlled by these types of statements
+		/* 1. Simple If Statement for Single Condition check (Only True) */
 		int n = 10;
 		
 		//Check if the number is equal to "10"
 		if (n == 10)
 			System.out.println("The variable \"n\" having value '" + n + "' is equal to 10"); //Executed if the condition is True
 		
-		/* If-Else Statement for Single Condition check (True and False) */
+		/* 2. If-Else Statement for Single Condition check (True and False) */
 		int num = 7;
 		
 		//Check if the number is even or odd. State the condition in if statement
@@ -21,7 +21,7 @@ public class IfElseElseIfStatementsIntroductionClass
 		else
 			System.out.println("The variable \"num\" having value '" + num + "' is Odd"); //Executed if the condition is False
 		
-		/* Multiple If-Else Statement for Multiple Conditions check */
+		/* 3. Multiple If-Else Statement for Multiple Conditions check */
 		//Even if a particular condition matches, still all the subsequent if statements will be evaluated and also else statement will be evaluated
 		int n1 = 11;
 		
@@ -41,7 +41,7 @@ public class IfElseElseIfStatementsIntroductionClass
 		else
 			System.out.println("The variable \"n1\" having value '" + n1 + "' is equal to no value listed"); //Executed if all the conditions are False
 		
-		/* Nested If-Else Statement for Multiple Conditions check */
+		/* 4. Nested If-Else Statement for Multiple Conditions check */
 		int no1 = 22, no2 = 17, no3 = 26;
 		//Check if the number "no1" is smaller than the number "no2"
 		if (no1 < no2)
@@ -63,7 +63,7 @@ public class IfElseElseIfStatementsIntroductionClass
 		
 		//Print the smallest number from the three numbers - "no1", "no2", and, "no3"
 		
-		/* If-Else If Statement for Multiple Conditions check */
+		/* 5. If-Else If Statement for Multiple Conditions check */
 		//If a particular condition matches, all the conditions below it will be skipped
 		int num1 = 6, num2 = 10, num3 = 8;
 		
