@@ -4,7 +4,7 @@ public class PrintWithoutSemicolonClass
 {
 	public static void main(String[] args)
 	{
-		//Directly not possible asmissing a semicolon ";" at the end of any valid statement will give error
+		//Directly not possible as missing a semicolon ";" at the end of any valid statement will give error
 		//println() method returns void, i.e. nothing, while printf() method returns an object of PrintStream class
 		//Put printf() method inside an "if" statement to check if the printf() method returns "null"
 		//"if" statement doesn't use a semicolon ";" at the end. Hence, no a semicolon ";" is used at all

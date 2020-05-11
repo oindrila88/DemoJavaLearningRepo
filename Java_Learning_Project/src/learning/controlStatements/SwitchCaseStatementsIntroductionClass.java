@@ -7,10 +7,11 @@ public class SwitchCaseStatementsIntroductionClass
 		/* Selection Control Statements */
 		/* Switch-Case Statement */
 		//To check Multiple Conditions in an efficient manner without using Multiple If-Else Statement, Switch-Case Statement is used
-		//Switch block takes convertible Int values, Strings or Enum variables
+		//Switch block takes implicitly convertible Int values, Strings (Java 1.7 onwards) or Enum variables
 		int num = 5;
 		
 		//Check if the number is equal to "5" without using "break" Statement
+		
 		/*
 		switch (num)
 		{
@@ -36,7 +37,9 @@ public class SwitchCaseStatementsIntroductionClass
 				System.out.println("The variable \"num\" having value '" + num + "' is equal to 9");
 			case 10:
 				System.out.println("The variable \"num\" having value '" + num + "' is equal to 10");
+		}
 		*/
+		
 		//If "break" is not used in any of the cases, once the case matches, all the cases below it will still be evaluated. To stop that "break" should be used in every cases.
 		//Check if the number is equal to "5" using "break" Statement
 		switch (num)
@@ -118,7 +121,7 @@ public class SwitchCaseStatementsIntroductionClass
 				System.out.println("The variable \"num\" having value '" + num + "' is equal to no value listed in any of the cases");
 		}
 		
-		//Switch block takes Byte because, ultimately the Byte value gets converted into Integer value
+		//Switch block takes Byte because, ultimately the Byte value gets implicitly converted into Integer value
 		byte b = 3;
 		
 		switch(b)
@@ -145,7 +148,7 @@ public class SwitchCaseStatementsIntroductionClass
 				System.out.println("Byte value doesn't matches");
 		}
 		
-		//Switch block takes Short because, ultimately the Short value gets converted into Integer value
+		//Switch block takes Short because, ultimately the Short value gets implicitly converted into Integer value
 		short s = 3001;
 				
 		switch(s)
@@ -203,7 +206,7 @@ public class SwitchCaseStatementsIntroductionClass
 		//Switch block doesn't take Float values
 		//Switch block doesn't take Double values
 		
-		//Switch block takes Character because, ultimately the Character value gets converted into Integer value
+		//Switch block takes Character because, ultimately the Character value gets implicitly converted into Integer value
 		char c = 'B';
 								
 		switch(c)
@@ -255,6 +258,41 @@ public class SwitchCaseStatementsIntroductionClass
 				break;
 			default:
 				System.out.println("String value doesn't matches");
+		}
+		
+		//Multiple Case Statements Having Single Operation
+		//Find if the Unitary Digit of a 3-Digit Number is Equal to 3 or 5 or 7 Using the Switch-Case Statement
+		int num1 =307;
+		int unitDigit = num1 % 100;
+		
+		switch(unitDigit)
+		{
+			case 0:
+				System.out.println("Unitary Digit of the number \"num1\" " + num1 + " is '0'");
+				break;
+			case 1:
+				System.out.println("Unitary Digit of the number \"num1\" " + num1 + " is '1'");
+				break;
+			case 2:
+				System.out.println("Unitary Digit of the number \"num1\" " + num1 + " is '2'");
+				break;
+			case 3:
+			case 5:
+			case 7:
+				System.out.println("Unitary Digit of the number \"num1\" " + num1 + " is '3' or '5' or '7'");
+				break;
+			case 4:
+				System.out.println("Unitary Digit of the number \"num1\" " + num1 + " is '4'");
+				break;
+			case 6:
+				System.out.println("Unitary Digit of the number \"num1\" " + num1 + " is '6'");
+				break;
+			case 8:
+				System.out.println("Unitary Digit of the number \"num1\" " + num1 + " is '8'");
+				break;
+			case 9:
+				System.out.println("Unitary Digit of the number \"num1\" " + num1 + " is '9'");
+				break;
 		}
 	}
 }

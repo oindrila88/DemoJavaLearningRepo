@@ -22,24 +22,24 @@ public class IfElseElseIfStatementsIntroductionClass
 			System.out.println("The variable \"num\" having value '" + num + "' is Odd"); //Executed if the condition is False
 		
 		/* Multiple If-Else Statement for Multiple Conditions check */
-		//Even if a particular condition matches, still all the conditions below it will be evaluated
-		int n1 = 13;
+		//Even if a particular condition matches, still all the subsequent if statements will be evaluated and also else statement will be evaluated
+		int n1 = 11;
 		
-		//Check if the number is equal to "13"
+		//Check if the number is equal to "11"
 		if (n1 == 5)
-			System.out.println("The variable \"n\" having value '" + n + "' is equal to 5"); //Executed if the first condition is True
+			System.out.println("The variable \"n1\" having value '" + n1 + "' is equal to 5"); //Executed if the first condition is True
 		if (n1 == 7)
-			System.out.println("The variable \"n\" having value '" + n + "' is equal to 7"); //Executed if the second condition is True
+			System.out.println("The variable \"n1\" having value '" + n1 + "' is equal to 7"); //Executed if the second condition is True
 		if (n1 == 9)
-			System.out.println("The variable \"n\" having value '" + n + "' is equal to 9"); //Executed if the third condition is True
+			System.out.println("The variable \"n1\" having value '" + n1 + "' is equal to 9"); //Executed if the third condition is True
 		if (n1 == 11)
-			System.out.println("The variable \"n\" having value '" + n + "' is equal to 11"); //Executed if the fourth condition is True
+			System.out.println("The variable \"n1\" having value '" + n1 + "' is equal to 11"); //Executed if the fourth condition is True
 		if (n1 == 13)
-			System.out.println("The variable \"n\" having value '" + n + "' is equal to 7"); //Executed if the fifth condition is True
+			System.out.println("The variable \"n1\" having value '" + n1 + "' is equal to 13"); //Executed if the fifth condition is True
 		if (n1 == 15)
-			System.out.println("The variable \"n\" having value '" + n + "' is equal to 7"); //Executed if the sixth condition is True
+			System.out.println("The variable \"n1\" having value '" + n1 + "' is equal to 15"); //Executed if the sixth condition is True
 		else
-			System.out.println("The variable \"n\" having value '" + n + "' is equal to no value listed"); //Executed if all the conditions are False
+			System.out.println("The variable \"n1\" having value '" + n1 + "' is equal to no value listed"); //Executed if all the conditions are False
 		
 		/* Nested If-Else Statement for Multiple Conditions check */
 		int no1 = 22, no2 = 17, no3 = 26;
