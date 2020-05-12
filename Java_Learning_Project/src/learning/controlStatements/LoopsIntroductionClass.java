@@ -6,7 +6,7 @@ public class LoopsIntroductionClass
 	{
 		//Iteration / Looping Control Statements - Statements that execute a block of code repeatedly until a specified condition is met
 		//To perform same task repeatedly in Java, Iteration block, i.e., Loops are used
-		//In java, 4 types of Loops are available - 1. While 2. Do-While 3. For 4. ForEach
+		//In java, 4 types of Loops are available - 1. While 2. Do-While 3. For 4. ForEach or Enhanced For
 		//Any Loop has three parts - A. Initialization B. Condition C. Increment
 		
 		//1. While Loop - First checks the condition, then executes the associated Iteration block only if the condition turns out to be True
@@ -107,5 +107,34 @@ public class LoopsIntroductionClass
 			//C. Increment the counter variable by 1
 			countFor++;
 		}
+		
+		/*
+		//Infinite For Loop - An infinite "For" loop can be created intentionally if all the three parts of a Loop, i.e., A. Initialization B. Condition C. Increment are left empty
+		System.out.println("Infinite For Loop :");
+		
+		for (;;)
+			System.out.println("Inside Infinite For Loop");
+		*/
+		
+		//4. ForEach or Enhanced For Loop - This loop is mainly used to traverse each of the Array or Collection elements one by one.
+		//Advantages of Using ForEach or Enhanced For Loop -
+		//A. It eliminates the possibility of programming errors of Array Index getting out of Bound
+		//B. It makes the code more readable
+		
+		//Disadvantages of Using ForEach or Enhanced For Loop -
+		//A. It cannot traverse the Array or Collection elements in reverse order
+		//B. In the ForEach or Enhanced For Loop, there is no option to skip any element because, this loop does not work on index basis
+		//But it is recommended to use the ForEach or Enhanced For Loop for traversing the elements of Array or Collection because, it makes the code more readable
+		
+		//Create a Single Dimension Array Literal
+		int arr[] = {2, 8, 6, 4, 5, 4};
+		
+		//Print all the elements of the Array "arr" using "ForEach" or "Enhanced For" loop
+		System.out.println("Value of All the Elements of the Array \"arr\" Using \"ForEach\" Loop :");
+		
+		for(int i : arr)
+			System.out.print(i + " ");
+		
+		System.out.println();
 	}
 }
