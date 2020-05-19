@@ -6,7 +6,7 @@ public class SingleDimensionArrayIntroductionClass
 {
 	public static void main(String[] args)
 	{
-		//Array - An Array is a group of like-typed variables that are referred by a common name. In Java, all Arrays are dynamically allocated, that means, Arrays are Objects in Java. Hence, the length of an Array can be fetched using the member "length"
+		//Array - An Array is a group of like-typed variables that are referred by a common name. In Java, all Arrays are dynamically allocated, that means, Arrays are Objects in Java. Hence, the length of an Array can be fetched using the member variable "length"
 		//Arrays can contain primitive data types (like, int, char, float etc.), as well as Object (non-primitive) references of a Class. In case of primitive data types, the actual values are stored in contiguous Stack Memory locations. In case of Objects of a Class, the actual Objects are stored in Heap Memory
 		
 		/* Initialization of Single Dimensional Array */
@@ -33,7 +33,7 @@ public class SingleDimensionArrayIntroductionClass
 		//Access all the elements of the Array "arr1" using "For" loop
 		System.out.println("Accessing All the Elements of the Array \"arr1\" Using \"For\" Loop :");
 		for(int i = 0; i < arr1.length; i++)
-			System.out.print(i + " ");
+			System.out.print(arr1[i] + " ");
 		
 		System.out.println();
 		
@@ -61,6 +61,7 @@ public class SingleDimensionArrayIntroductionClass
 		Random r = new Random();
 		int arr2[] = new int[20];
 		
+		//Assign the random 20 values into the Array arr2
 		for(int i = 0; i < arr2.length; i++)
 		{
 			arr2[i] = r.nextInt(50); //The upper range, i.e., the maximum value to print

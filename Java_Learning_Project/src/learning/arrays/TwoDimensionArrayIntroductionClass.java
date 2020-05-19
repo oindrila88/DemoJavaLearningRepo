@@ -52,7 +52,7 @@ public class TwoDimensionArrayIntroductionClass
 		for(int row[] : arr1)
 		{
 			for(int colVal : row)
-				System.out.println("Column Value : " + colVal + " ");
+				System.out.println("Column Value : " + colVal);
 		}
 				
 		System.out.println();
