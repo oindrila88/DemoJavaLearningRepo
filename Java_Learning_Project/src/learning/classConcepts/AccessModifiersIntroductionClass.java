@@ -48,5 +48,7 @@ public class AccessModifiersIntroductionClass
 		System.out.println("Value of Public String Variable 'name' is : " + name + " in Public Method 'show'");
 	}
 	
+	//"Private Modifier" can only be used with "Inner Classes"
+	
 	//2. Non-Access Modifiers - There are many Non-Access Modifiers, such as, "final", "static", "abstract", "synchronize", "native", "volatile", "transient" etc
 }

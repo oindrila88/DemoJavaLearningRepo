@@ -75,5 +75,56 @@ public class CallingClass
 		
 		//Trying to access Public Static Variable "d" assigned in a "Static Block" in the Class "StaticIntroductionClass", from outside the Class, but, within the same Package
 		System.out.println("Value of Public Static Variable 'd' is : " + StaticIntroductionClass.d + " in the same Package 'learning.classConcepts'");
+	
+		//Instantiating the Outer Class "NestedClassIntroductionClass"
+		NestedClassIntroductionClass oObj = new NestedClassIntroductionClass();
+		
+		//Accessing the Inner Class Method "show()" through the Outer Class Method "accessInnerClass()"
+		oObj.accessInnerClass();
+		
+		//Access Private Instance Members of Outer Class using Non-Private Inner Class
+		//Using the Object of the Outer Class, Object of the Inner Class can be instantiated
+		NestedClassIntroductionClass.Inner_AccessPrivate_NestedClassIntroductionClass pObj = oObj.new Inner_AccessPrivate_NestedClassIntroductionClass();
+		System.out.println("Displaying value of the Private Member 'name' from the Class 'CallingClass'" + pObj.getPrivateName());
+		
+		//Calling the Method containing the Method-Local Inner Class using the Object of the Outer Class
+		oObj.show();
+		
+		//Calling the Methods of the Anonymous Inner Class, that Extends an Abstract Class, using the Object of the Outer Class
+		oObj.objDemoAbstract.setA(38);
+		oObj.objDemoAbstract.getA();
+		
+		//Calling the Methods of the Anonymous Inner Class, that Extends a Non-Abstract Class, using the Object of the Outer Class
+		oObj.objDemoClass.setB(54);
+		oObj.objDemoClass.getB();
+		
+		//Calling the Methods of the Anonymous Inner Class, that Implements an Interface, using the Object of the Outer Class
+		oObj.objDemoInterface.getFirstName();
+		oObj.objDemoInterface.getLastName();
+		
+		//Calling the Methods of the Interface from a Method that takes an Object of that Interface as Parameter. While calling that Method, Anonymous Inner Class is Defined as the "Method Argument", and, the Method is called using the Object of the Outer Class
+		oObj.printDemoInterfaceMethods
+		(
+			new DemoInterface()
+			{
+				@Override
+				public String getFirstName()
+				{
+					System.out.println("Returning the value of 'firstName' from the 'getFirstName' method of the Anonymous Inner Class of the Interface 'DemoInterface' from 'CallingClass' : " + firstName);
+					return firstName;
+				}
+
+				@Override
+				public String getLastName()
+				{
+					System.out.println("Returning the value of 'lastName' from the 'getLastName' method of the Anonymous Inner Class of the Interface 'DemoInterface' from 'CallingClass' : " + lastName);
+					return lastName;
+				}
+			}
+		);
+		
+		//Instantiating a "Static Nested Class" is a bit different from instantiating an "Inner Class". Calling Method from Static Nested Class "NestedStaticDemo" of the Outer Class "NestedClassIntroductionClass"
+		NestedClassIntroductionClass.NestedStaticDemo staticObj = new NestedClassIntroductionClass.NestedStaticDemo();
+		staticObj.displayCity("Kolkata");
 	}
 }
