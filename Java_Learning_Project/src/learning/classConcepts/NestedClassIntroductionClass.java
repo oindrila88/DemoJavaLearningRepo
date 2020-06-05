@@ -2,7 +2,7 @@ package learning.classConcepts;
 
 public class NestedClassIntroductionClass
 {
-	//Nested Class - Writing a Class within another Class is allowed in Java. The Class written within is called the "Nested Class", and, the Class that holds the "Nested Class"is called the "Outer Class"
+	//Nested Class - Writing a Class within another Class is allowed in Java. The Class written within is called the "Nested Class", and, the Class that holds the "Nested Class"is called the "Outer Class". It provides a compelling way of grouping elements that are only going to be used in one place, this helps to keep code more organized and readable
 	
 	//"Nested Classes" are divided into two types -
 	//1. Non-Static Nested Class - "Non-Static Nested Classes" are a "Security Mechanism" in Java. It is known that, a Class cannot be associated with the "Private Access Modifier", but if the Class is a Member of another Class, then the "Nested Class" can be made Private, and, this is also used to access the Private Instance Members of concerned Outer Class. "Non-Static Nested Classes" are of three types depending on how and where the Classes are defined. These are -
@@ -149,7 +149,7 @@ public class NestedClassIntroductionClass
 		demo.getLastName();
 	}
 	
-	//2. Static Nested Class - A "Static Nested Class" is a Nested Class which is a "Static Member" of the Outer Class. It can be accessed without instantiating the Outer Class, using other "Static Members". Just like "Static Members", a "Static Nested Class" does not have access to the Instance Variables, and, Instance Methods of the Outer Class
+	//2. Static Nested Class - A "Static Nested Class" is a Nested Class which is a "Static Member" of the Outer Class. It can be accessed without instantiating the Outer Class, using other "Static Members". "Static Nested Classes" do not have access to any Instance Members of the enclosing Outer Class. It can access Instance Members through an Objects's reference
 	static String city = "Bhubaneswar";
 	
 	static class NestedStaticDemo

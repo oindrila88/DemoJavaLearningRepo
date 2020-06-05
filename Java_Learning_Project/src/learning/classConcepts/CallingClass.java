@@ -61,21 +61,65 @@ public class CallingClass
 		obj2.name = "Rama";
 		obj2.show("Premanshu");
 		
-		//Five Objects of the Class "StaticIntroductionClass" is created. Hence the Method "counter" would print Five as the number of Objects created 
+		//Instantiate an Object of the Class "StaticIntroductionClass". Access the "Static Variable" from "Instance" Method using an Object of the Class "StaticIntroductionClass"
 		StaticIntroductionClass sObj = new StaticIntroductionClass();
+		sObj.accessStaticVarFromInstanceMethod(6);
+		//Again access the "Static Variable" from "Instance" Method using another Object of the Class "StaticIntroductionClass"
 		StaticIntroductionClass sObj1 = new StaticIntroductionClass();
-		StaticIntroductionClass sObj2 = new StaticIntroductionClass();
-		StaticIntroductionClass sObj3 = new StaticIntroductionClass();
-		StaticIntroductionClass sObj4 = new StaticIntroductionClass();
+		sObj1.accessStaticVarFromInstanceMethod(8);
 		
-		sObj2.counter();
+		//Access the "Static Variable" from "Static" Method using the Class Name "StaticIntroductionClass"
+		StaticIntroductionClass.accessStaticVarFromStaticMethod("Oindrila");
+		//Again access the "Static Variable" from "Static" Method using the Class Name "StaticIntroductionClass"
+		StaticIntroductionClass.accessStaticVarFromStaticMethod("Soumyajyoti");
+		
+		//Call Static Method from within the Instance Method, which is called using an Object of the Class "StaticIntroductionClass"
+		sObj1.accessStaticMethodFromInstanceMethod("Kasturi");
+		
+		//Call Static Method from within another Static Method, which is called using the Class Name "StaticIntroductionClass"
+		StaticIntroductionClass.accessStaticMethodFromStaticMethod("Rama");
 		
 		//Trying to access Default Static Variable "name" assigned in a "Static Block" in the Class "StaticIntroductionClass", from outside the Class, but, within the same Package
 		System.out.println("Value of Default Static Variable 'name' is : " + StaticIntroductionClass.name + " in the same Package 'learning.classConcepts'");
-		
+				
 		//Trying to access Public Static Variable "d" assigned in a "Static Block" in the Class "StaticIntroductionClass", from outside the Class, but, within the same Package
 		System.out.println("Value of Public Static Variable 'd' is : " + StaticIntroductionClass.d + " in the same Package 'learning.classConcepts'");
+		
+		//Five Objects of the Class "StaticIntroductionClass" is created. Hence the Method "counter" would print Five as the number of Objects created 
+		StaticIntroductionClass sObjCount = new StaticIntroductionClass();
+		StaticIntroductionClass sObjCo1 = new StaticIntroductionClass();
+		StaticIntroductionClass sObjCo2 = new StaticIntroductionClass();
+		StaticIntroductionClass sObjCo3 = new StaticIntroductionClass();
+		StaticIntroductionClass sObjCo4 = new StaticIntroductionClass();
+		
+		sObjCo2.counter();
+		
+		//Create First Object of the Outer Singleton Class "SingletonWithNestedStatic"
+		SingletonWithNestedStatic singletonObj = SingletonWithNestedStatic.getInstance();
+		//Assign the value of the Instance Variable "state" using the First Object 'singletonObj'
+		singletonObj.state = "West Bengal";
+		
+		//Create Second Object of the Outer Singleton Class "SingletonWithNestedStatic"
+		SingletonWithNestedStatic singletonObj1 = SingletonWithNestedStatic.getInstance();
+		//Fetch the value of the Instance Variable "state" using the Second Object 'singletonObj1', which was assigned with the First Object 'singletonObj'
+		System.out.println("Value of the Instance Variable 'state' accessed using the Second Object 'singletonObj1' is : " + singletonObj1.state);
 	
+		//Create Third Object of the Outer Singleton Class "SingletonWithNestedStatic"
+		SingletonWithNestedStatic singletonObj2 = SingletonWithNestedStatic.getInstance();
+		//Fetch the value of the Instance Variable "state" using the Third Object 'singletonObj2', which was assigned with the First Object 'singletonObj'
+		System.out.println("Value of the Instance Variable 'state' accessed using the Third Object 'singletonObj1' is : " + singletonObj2.state);
+		
+		//Create Fourth Object of the Outer Singleton Class "SingletonWithNestedStatic"
+		SingletonWithNestedStatic singletonObj3 = SingletonWithNestedStatic.getInstance();
+		//Fetch the value of the Instance Variable "state" using the Fourth Object 'singletonObj3', which was assigned with the First Object 'singletonObj'
+		System.out.println("Value of the Instance Variable 'state' accessed using the Fourth Object 'singletonObj3' is : " + singletonObj3.state);
+		
+		//Create Fifth Object of the Outer Singleton Class "SingletonWithNestedStatic"
+		SingletonWithNestedStatic singletonObj4 = SingletonWithNestedStatic.getInstance();
+		//Fetch the value of the Instance Variable "state" using the Fifth Object 'singletonObj4', which was assigned with the First Object 'singletonObj'
+		System.out.println("Value of the Instance Variable 'state' accessed using the Fifth Object 'singletonObj4' is : " + singletonObj4.state);
+		
+		/*
 		//Instantiating the Outer Class "NestedClassIntroductionClass"
 		NestedClassIntroductionClass oObj = new NestedClassIntroductionClass();
 		
@@ -126,5 +170,6 @@ public class CallingClass
 		//Instantiating a "Static Nested Class" is a bit different from instantiating an "Inner Class". Calling Method from Static Nested Class "NestedStaticDemo" of the Outer Class "NestedClassIntroductionClass"
 		NestedClassIntroductionClass.NestedStaticDemo staticObj = new NestedClassIntroductionClass.NestedStaticDemo();
 		staticObj.displayCity("Kolkata");
+		*/
 	}
 }
