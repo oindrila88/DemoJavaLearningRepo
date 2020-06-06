@@ -1,4 +1,4 @@
-package otherOops;
+package learning.otherOOps;
 
 import learning.oops.*;
 
