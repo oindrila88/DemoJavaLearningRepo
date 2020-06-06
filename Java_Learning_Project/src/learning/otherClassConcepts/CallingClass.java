@@ -14,6 +14,10 @@ public class CallingClass
 		obj.display(1.9); //Compile-Time Error: "The method display(double) from the type AccessModifiersIntroductionClass is not visible"
 		*/
 		
+		//Trying to access Protected Members of the Class "AccessModifiersIntroductionClass" from outside the Class, and, also outside the Package "learning.classConcepts" gives Compile-Time Error, because, since the Member Variable "b", and, Member Method "display" are not public, those cannot be accessed from outside the Package.
+		//obj.c = 22; //Compile-Time Error: "The field AccessModifiersIntroductionClass.c is not visible"
+		//obj.show(24); //Compile-Time Error: "The method show(int) from the type AccessModifiersIntroductionClass is not visible"
+		
 		//Trying to access Public Members of the Class "AccessModifiersIntroductionClass" from outside the Class, and, also outside the Package "learning.classConcepts"
 		obj.name = "Kasturi";
 		obj.show("Oindrila");

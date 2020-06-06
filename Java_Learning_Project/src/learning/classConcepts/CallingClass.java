@@ -57,6 +57,10 @@ public class CallingClass
 		obj2.b = 5.4;
 		obj2.display(1.9);
 		
+		//Trying to access Protected Members of the Class "AccessModifiersIntroductionClass" from outside the Class, but, within the same Package
+		obj2.c = 12;
+		obj2.show(18);
+		
 		//Trying to access Public Members of the Class "AccessModifiersIntroductionClass" from outside the Class, but, within the same Package
 		obj2.name = "Rama";
 		obj2.show("Premanshu");

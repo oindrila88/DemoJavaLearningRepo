@@ -4,7 +4,7 @@ import java.util.*;
 
 public class StaticIntroductionClass
 {
-	//Static - The keyword "Static" indicates that the particular Member belongs to a Type itself, rather than to an Instance of that Type, i.e., it can be accessed without reference to any Instance (Object). When a Member of a Class is declared "Static", only one Instance of that "Static" Member is created before any Instances (Objects) of that Class are created, and, is shared across all Instances of the Class. "Static" is a "Non-Access Modifier" in Java which is applicable for the following -
+	//Static - The keyword "Static" indicates that the particular Member belongs to a Type itself, rather than to an Instance of that Type, i.e., it can be accessed without reference to any Instance (Object). When a Member of a Class is declared "Static", only one Instance of that "Static" Member is created before any Instances (Objects) of that Class are created, and, is shared across all Instances of that Class. "Static" is a "Non-Access Modifier" in Java which is applicable for the following -
 	
 	//1. Static Variable - In Java, if a "Variable" is declared "Static", then exactly a Single Copy of that "Variable" is created and shared among all Instances of that Class. It doesn't matter how many Instances (Objects) of that Class are created, there will always be only one copy of that particular "Static Variable" belonging to it. Memory of any "Static Variable" is allocated only once in a particular pool in JVM called "Metaspace" since Java8, when the Class is loaded into the Memory. "Static Variables" are "Class-Level Variables"
 	//Unlike "Non-Static Variables", "Static Variables" can be accessed directly in "Static" and "Non-Static" Methods
@@ -37,18 +37,23 @@ public class StaticIntroductionClass
 		accessStaticVarFromStaticMethod(name);
 	}
 	
+	String lastName = "Chakraborty";
+	
 	static void accessStaticMethodFromStaticMethod(String name)
 	{
 		System.out.println("Calling Static Method 'accessStaticVarFromStaticMethod' from Static Method 'accessStaticMethodFromStaticMethod'");
 		accessStaticVarFromStaticMethod(name);
+		
+		//Trying to Refer Instance Variable 'lastName' from Static Method 'accessStaticMethodFromStaticMethod'
+		//lastName = "Bagchi"; //Error: "Cannot make a static reference to the non-static field lastName"
 		
 		//Trying to Call Instance Method 'accessStaticVarFromInstanceMethod' from Static Method 'accessStaticMethodFromStaticMethod'
 		//accessStaticVarFromInstanceMethod(8); // Error: "Cannot make a static reference to the non-static method accessStaticVarFromInstanceMethod(int) from the type StaticIntroductionClass"
 	}
 	
 	//3. Static Block - Although "Static Variables" can be initialized directly during declaration, yet, there are situations when multi-line coding needs to be written. In such cases, "Static Block" comes in handy.
-	//A "Static Block" is used for initializing "Static Variables", which require additional multi-statement logic other than assignment, or, if the "Static Variables" are error-prone and require "Exception Handling", then "Static Block" is used. This block gets executed when a Class is loaded into JVM. That means, JVM will call the "Static Block" even before calling the "main()" Method. If any code is written in the "Static Block", first those codes will get executed, and, only after that the control will go to the "main()" Method
-	//It is possible to have more than one "Static Blocks" in a single Class. When that Class is loaded in JVM, all the "Static Blocks" will be called in sequence, and, then the "main()" Method
+	//A "Static Block" is used for initializing "Static Variables", which require additional multi-statement logic other than assignment, or, if the "Static Variables" are error-prone and require "Exception Handling", then "Static Block" is used. This block gets executed only once in the entire Program, when a Class is loaded into JVM. That means, JVM will call the "Static Block" even before creating any Objects of the concerned Class. If any code is written in the "Static Block", first those codes will get executed, and, only after that the control will go to the "Constructor" of the concerned Class
+	//It is possible to have more than one "Static Blocks" in a single Class. When that Class is loaded in JVM, all the "Static Blocks" will be called in sequence, and, then the "Constructor" of the concerned Class
 	static List<String> names = new ArrayList<>();
 	
 	static
@@ -124,6 +129,8 @@ public class StaticIntroductionClass
 class SingletonWithNestedStatic
 {	
 	String state;
+	private static int a;
+	static double d;
 	
 	private SingletonWithNestedStatic()
 	{
@@ -135,6 +142,15 @@ class SingletonWithNestedStatic
 	private static class SingletonHolder
 	{
 		static final SingletonWithNestedStatic instance = new SingletonWithNestedStatic();
+		
+		// "Static Nested Classes" can access all "Static Members" of the enclosing Outer Class, including "Private Static Members"
+		/*
+		private void assignValues()
+		{
+			a = 6;
+			d = 3.6;
+		}
+		*/
 	}
 	
 	static SingletonWithNestedStatic getInstance()

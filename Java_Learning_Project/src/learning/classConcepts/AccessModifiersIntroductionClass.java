@@ -1,7 +1,7 @@
 package learning.classConcepts;
 
 public class AccessModifiersIntroductionClass
-{
+{	
 	//There are two types of Modifiers in Java :
 	//1. Access Modifiers - The Access Modifiers in Java specifies the "Accessibility" or "Scope" of a Field, Method, Constructor or Class. The "Access Level" of Fields, Methods, Constructors or Classes can be changed by applying the Access Modifiers on those. Access Modifiers are used to "Encapsulate" the "State of an Object". There are 4 types of Access Modifiers in Java. These are -
 	//A. Private - The "Access Level" of a "Private Modifier" is only within the Class. It cannot be accessed from outside the Class. The "Private Modifier" can be applied on Fields, Methods, and, Constructors. This Modifier cannot be applied on Classes
