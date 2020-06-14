@@ -4,6 +4,7 @@ public class CallingClass
 {
 	public static void main(String[] args)
 	{
+		/*
 		ClassObjectIntroductionClass obj = new ClassObjectIntroductionClass();
 	  //|						 | 	 | |  |  | |							  |
 	  // ------------------------  	 ---  ---- --------------------------------
@@ -44,7 +45,13 @@ public class CallingClass
 		//Constructor with Variable Arguments
 		obj1 = new ConstructorIntroductionClass(3, 1.7, "Constructor With Variable Argument", "One", "Two", "Three", "Four", "Five");
 		obj1.displayX();
+		*/
 		
+		//Create an Object of the Class "ConstructorIntroductionClass" using the "Constructor" that takes an int Parameter
+		ConstructorIntroductionClass objConstruct = new ConstructorIntroductionClass(19.9);
+		ConstructorIntroductionClass objConstruct1 = new ConstructorIntroductionClass(11);
+		
+		/*
 		//If the Constructor of the Class "AccessModifiersIntroductionClass" was made Private, the Compile-Time Error "The constructor AccessModifiersIntroductionClass() is not visible" is Displayed
 		AccessModifiersIntroductionClass obj2 = new AccessModifiersIntroductionClass();
 		//Trying to access Private Members from outside the Class gives a Compile-Time Error
@@ -53,6 +60,7 @@ public class CallingClass
 		obj2.display(4); //Compile-Time Error: "The method display() from the type AccessModifiersIntroductionClass is not visible"
 		*/
 		
+		/*
 		//Trying to access Default Members of the Class "AccessModifiersIntroductionClass" from outside the Class, but, within the same Package
 		obj2.b = 5.4;
 		obj2.display(1.9);
@@ -123,7 +131,6 @@ public class CallingClass
 		//Fetch the value of the Instance Variable "state" using the Fifth Object 'singletonObj4', which was assigned with the First Object 'singletonObj'
 		System.out.println("Value of the Instance Variable 'state' accessed using the Fifth Object 'singletonObj4' is : " + singletonObj4.state);
 		
-		/*
 		//Instantiating the Outer Class "NestedClassIntroductionClass"
 		NestedClassIntroductionClass oObj = new NestedClassIntroductionClass();
 		

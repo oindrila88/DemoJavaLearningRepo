@@ -4,6 +4,8 @@ public class OOPsCallingClass
 {
 	public static void main(String[] args)
 	{
+		/*
+		//1. OOPs Concept - Encapsulation
 		//Creating Object of the Class "EncapsulationIntroductionClass"
 		EncapsulationIntroductionClass objEncp = new EncapsulationIntroductionClass();
 		
@@ -16,5 +18,11 @@ public class OOPsCallingClass
 		
 		objEncp.setLastName("Bagchi");
 		System.out.println("Last Name : " + objEncp.getLastName());
+		
+		//2. OOPs Concept - Inheritance
+		 */
+		PolymorphismIntroductionClass obj = new PolymorphismIntroductionClass();
+		obj.getA(6, 9.7f);
+		PolymorphismIntroductionClass.getA(7.5f, 9);
 	}
 }
