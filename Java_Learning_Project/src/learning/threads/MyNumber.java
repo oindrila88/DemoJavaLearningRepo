@@ -3,15 +3,15 @@ package learning.threads;
 public class MyNumber
 {
 	int x;
-	boolean isValueSet = false;
+	boolean isLocked = false;
 	
 	public synchronized void setNumber(int x)
 	{
-		if (!isValueSet)
+		if (!isLocked)
 		{
 			System.out.println("Setting the number to 'x' : " + x);
 			this.x = x;
-			isValueSet = true;
+			isLocked = true;
 			notify();
 		}
 		else
@@ -29,10 +29,10 @@ public class MyNumber
 	
 	public synchronized void getNumber()
 	{
-		if (isValueSet)
+		if (isLocked)
 		{
 			System.out.println("Value in 'x' : " + x);
-			isValueSet = false;
+			isLocked = false;
 			notify();
 		}
 		else

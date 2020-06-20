@@ -1,6 +1,7 @@
 package learning.otherOOps;
 
 import learning.oops.*;
+import learning.oops.inheritance.Vehicle;
 
 public class Bus extends Vehicle
 {

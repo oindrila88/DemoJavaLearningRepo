@@ -1,4 +1,4 @@
-package learning.oops;
+package learning.oops.encapsulation;
 
 public class EncapsulationIntroductionClass
 {

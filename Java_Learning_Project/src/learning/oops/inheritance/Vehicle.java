@@ -1,10 +1,10 @@
-package learning.oops;
+package learning.oops.inheritance;
 
 public class Vehicle
 {
 	//Inheritance - "Inheritance" is the mechanism that allows one Class to acquire all the "Properties" and "Functionalities" of another Class. The "Inheriting Class" is called "Child Class", or, "Sub Class", or, "Derived Class", while the "Inherited Class" is called as "Parent Class", or, "Super Class", or, "Base Class". "Inheritance" provides the idea of "Re-Usability of Code", and, each "Child Class" defines only those "Properties" and "Functionalities", which are unique to it. Rest of the "Properties" and "Functionalities" can be inherited from the "Parent Class". To inherit a Class "extends" keyword is used. In the absence of an "extends" keyword, a Class implicitly inherits the Class "java.lang.Object"
 	//The main advantage of using "Inheritance" is that, with "Inheritance" a Class can be created with basic "Properties" and "Functionalities", and, a specialized version of it can also be created by creating Classes that inherit the "Parent Class"
-	//What is Inherited to Child Class from Base Class - A "Parent Class" doesn't allow all of its Members to be accessed by "Child Classes". The "Private" and "Static" Members of a "Parent Class" are not inherited by "Child Classes". Basically, a "Child Class" inherits the "Protected" and "Public" Members from the "Parent Class", which are not "Static". In addition, the Members with "Default Access Modifier" in the "Parent Class" are inherited by the "Child Classes" only if the two Classes are in the same "Package". Also, if the "Parent Class" and "Child Classes" are defined in separated "Packages", Members with "Default Access Modifier" in the "Parent Class" are not inherited in the "Child Classes"
+	//What is Inherited to Child Class from Base Class - A "Parent Class" doesn't allow all of its Members to be accessed by "Child Classes". The "Private" Members of a "Parent Class" are not inherited by "Child Classes". Basically, a "Child Class" inherits the "Protected" and "Public" Members, and, "Static" Class Members from the "Parent Class". In addition, the Members with "Default Access Modifier" in the "Parent Class" are inherited by the "Child Classes" only if the two Classes are in the same "Package". Also, if the "Parent Class" and "Child Classes" are defined in separated "Packages", Members with "Default Access Modifier" in the "Parent Class" are not inherited in the "Child Classes"
 	//Types of Inheritance -
 	//1. Single Inheritance - "Single Inheritance" refers to a "Child" and "Parent" Class Relationship, where a Class extends the another Class
 	//2. Multilevel Inheritance - "Multilevel Inheritance" refers to a "Child" and "Parent" Class Relationship, where a "Child" Class extends the "Child" Class. Here, Class "Car" inherits Class "Vehicle", and, Class "ArmoredCar" inherits Class "Car"
@@ -23,7 +23,7 @@ public class Vehicle
 	
 	public Vehicle()
 	{
-		System.out.println("Default Constructor of Base Class 'Vehicle'");
+		System.out.println("No-Argument Constructor of Base Class 'Vehicle'");
 		wheels = 0;
 		model = "Vehicle";
 		companyName = "Tata";
@@ -62,5 +62,10 @@ public class Vehicle
 	{
 		System.out.println("Information of 'EngineVersion' in the Base Class 'Vehicle'");
 		System.out.println("EngineVersion : " + engineVersion);
+	}
+	
+	public static void staticVehicleMethod()
+	{
+		System.out.println("Inside the Static Method 'staticVehicleMethod' in Base Class 'Vehicle'");
 	}
 }
