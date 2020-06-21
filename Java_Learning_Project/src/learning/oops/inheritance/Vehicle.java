@@ -18,12 +18,25 @@ public class Vehicle
 	
 	static
 	{
+		System.out.println("Initializing the Static String Variable 'engineVersion' inside the 'Static Block' in the 'Parnt Class' 'Vehicle'");
 		engineVersion = "BS6";
+	}
+	
+	int[] vehicleArr;
+	{
+		System.out.println("Initializing the int Array 'vehicleArr' inside the 'Instance Initializer Block' in the 'Parnt Class' 'Vehicle'");
+		vehicleArr = new int[6];
+		vehicleArr[0] = 12;
+		vehicleArr[1] = 14;
+		vehicleArr[2] = 16;
+		vehicleArr[3] = 18;
+		vehicleArr[4] = 20;
+		vehicleArr[5] = 22;
 	}
 	
 	public Vehicle()
 	{
-		System.out.println("No-Argument Constructor of Base Class 'Vehicle'");
+		System.out.println("No-Argument Constructor of Parent Class 'Vehicle'");
 		wheels = 0;
 		model = "Vehicle";
 		companyName = "Tata";
@@ -31,7 +44,7 @@ public class Vehicle
 	
 	public Vehicle(int wheels, String model, String companyName)
 	{
-		System.out.println("Overloaded Constructor of Base Class 'Vehicle' with 'Wheels', 'Model' and 'CompanyName'");
+		System.out.println("Overloaded Constructor of Parent Class 'Vehicle' with 'Wheels', 'Model' and 'CompanyName'");
 		this.wheels = wheels;
 		this.model = model;
 		this.companyName = companyName;
@@ -39,33 +52,33 @@ public class Vehicle
 	
 	public void start()
 	{
-		System.out.println("Starting the Vehicle in the Base Class 'Vehicle'");
+		System.out.println("Starting the Vehicle in the Parent Class 'Vehicle'");
 	}
 	
 	public void stop()
 	{
-		System.out.println("Stopping the Vehicle in the Base Class 'Vehicle'");
+		System.out.println("Stopping the Vehicle in the Parent Class 'Vehicle'");
 	}
 	
 	public void honk()
 	{
-		System.out.println("Honking the Vehicle in the Base Class 'Vehicle'");
+		System.out.println("Honking the Vehicle in the Parent Class 'Vehicle'");
 	}
 	
 	public void vehicleInformation()
 	{
-		System.out.println("Information of 'Wheels', 'Model' and 'CompanyName' in the Base Class 'Vehicle'");
+		System.out.println("Information of 'Wheels', 'Model' and 'CompanyName' in the Parent Class 'Vehicle'");
 		System.out.println("Wheels : " + wheels + " Model : " + model + " CompanyName : " + companyName);
 	}
 	
 	public static void engineVersionInformation()
 	{
-		System.out.println("Information of 'EngineVersion' in the Base Class 'Vehicle'");
+		System.out.println("Information of 'EngineVersion' in the Parent Class 'Vehicle'");
 		System.out.println("EngineVersion : " + engineVersion);
 	}
 	
 	public static void staticVehicleMethod()
 	{
-		System.out.println("Inside the Static Method 'staticVehicleMethod' in Base Class 'Vehicle'");
+		System.out.println("Inside the Static Method 'staticVehicleMethod' in Parent Class 'Vehicle'");
 	}
 }

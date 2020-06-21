@@ -2,7 +2,7 @@ package learning.classConcepts;
 
 public class ConstructorIntroductionClass
 {
-	int x;
+	private int x;
 	double y;
 	String s;
 	
@@ -62,30 +62,46 @@ public class ConstructorIntroductionClass
 	//2. Code Optimization - Using "Constructor Chaining", "Code Optimization" is achieved. It means, the lines of codes get reduced
 	//3. Easy Maintenance - Using "Constructor Chaining" the code can be maintained easily, because, if the common functionalities are kept in the "Super Class Constructor", then if needed, changes need to be made only in the "Super Class Constructor"
 	//4. Memory Will Get Reduced - If the same code will repeat at multiple places, then more Memory will be used. To avoid this, "Constructor Chaining" is used to access the same code. Hence, less Memory is used
+	
+	//Rules of "Constructor Chaining" -
+	//The "this()" expression should always be the first line of the "Constructor", otherwise the Compilation Error will occur
+	//There should be at-least be one "Constructor" without the "this()" expression
+	//"Constructor Chaining" can be achieved in any order
+	
 	//"Constructor Chaining" can be done in two ways -
 	//1. Within the Same Class - It can be done using "this()" keyword for "Constructors" in the same Class
-	
-	public ConstructorIntroductionClass(int i)
+	public ConstructorIntroductionClass(int x)
 	{
 		this();
 		System.out.println("Inside the 'Constructor with Integer'");
-		x = i;
+		this.x = x;
 	}
 	
-	public ConstructorIntroductionClass(double d)
+	public ConstructorIntroductionClass(double y)
 	{
 		System.out.println("Inside the 'Constructor with Double'");
-		x = (int)d;
+		this.y = y;
 	}
 	
+	//"this" keyword is a reference to the "Current Instance" of any Class. Usage of "this" keyword -
 	//Constructor with Variable Arguments
-	public ConstructorIntroductionClass(int i, double j, String k, String ...l)
+	
+	public ConstructorIntroductionClass(int x, double y, String s, String ...l)
 	{
-		this(i);
+		//A. Referencing Constructors of the Same Class - From a "Constructor", "this()" can be used to call a different "Constructor" of the same Class. Here, "this(int)" is used for the "Constructor Chaining" to reduce the "Code Usage"
+		this(x);
 		System.out.println("Inside the 'Constructor with Variable Arguments'");
-		x = i;
-		y = j;
-		s = k;
+		
+		//B. Disambiguating Field Shadowing - "this" keyword is useful for "Disambiguating Instance Variables" from "Local Parameters". The most common reason is when there are "Constructor Parameters" with the same "Name" as "Instance Fields"
+		this.x = x;
+		this.y = y;
+		this.s = s;
+		
+		//C. Passing "this" as a Parameter - Following is the "displayValuesOfCurrentInstance() Method". To invoke the "Method", "this" is passed as a reference to the "Current Instance"
+		displayValuesOfCurrentInstance(this);
+		//or
+		//displayValuesOfCurrentInstance(returnCurrentInstance());
+		
 		System.out.println("Variable Arguments in Constructor : ");
 		for(String st : l)
 			System.out.print(st + " ");
@@ -96,4 +112,50 @@ public class ConstructorIntroductionClass
 	{
 		System.out.println("Value of 'x' is : " + x);
 	}
+	
+	//
+	public ConstructorIntroductionClass returnCurrentInstance()
+	{
+		
+		//D.Referencing Methods of the Same Class - From a "Constructor" or "Method", "this" keyword can be used to call a different "Method" of the same Class. Here, method "displayX()" is called from the method "returnCurrentInstance()"
+		//this.displayX();
+		
+		//E. Returning "this" - "this" keyword can also be used to return the "Current Instance" of the Class  from a "Method"
+		return this;
+	}
+	
+	void displayValuesOfCurrentInstance(ConstructorIntroductionClass constructorIntroductionClass)
+	{
+		System.out.println("'displayValuesOfCurrentInstance()' Method is Called from the Constructor of the Current Instance : ");
+		System.out.println("Value of 'x' in the Current Instance : " + this.x);
+		System.out.println("Value of 'y' in the Current Instance : " + this.y);
+		System.out.println("Value of 's' in the Current Instance : " + this.s);
+	}
+	
+	class Inner_ConstructorIntroductionClass
+	{
+		private int x;
+		double y;
+		String s;
+		
+		public Inner_ConstructorIntroductionClass()
+		{
+			//F. Using "this" Keyword Within the Inner Class - "this" keyword can be used to access the "Outer Class Instance" from within the "Inner Class"
+			x = ConstructorIntroductionClass.this.x;
+			y = ConstructorIntroductionClass.this.y;
+			s = ConstructorIntroductionClass.this.s;
+		}
+		
+		void show()
+		{
+			System.out.println("Inside the 'show' Method of the Inner Class 'Inner_ConstructorIntroductionClass'");
+			System.out.println("Value of 'x' inside the Inner Class 'Inner_ConstructorIntroductionClass' is : " + x);
+			System.out.println("Value of 'y' inside the Inner Class 'Inner_ConstructorIntroductionClass' is : " + y);
+			System.out.println("Value of 's' inside the Inner Class 'Inner_ConstructorIntroductionClass' is : " + s);
+		}
+	}
+	
+	//2. From Child Class to Parent Class: It can be done using "super()" keyword to call "Constructor" of the  "Parent Class" from the "Child Class"
+	//"Constructor Chaining" occurs through "Inheritance". A "Child Class" Constructor’s task is to call "Parent Class's" Constructor first. This ensures that creation of "Child Class's" object starts with the initialization of the Data Members of the "Parent Class". There could be any numbers of Classes in "Inheritance Chain". Every "Constructor" calls up the "Chain" till Class at the top is reached
+	//By default, "No-Argument Constructor" of the immediate "Parent Class" is called from any of the "Constructors" ("No-Argument", or, "Parameterized") of the "Child Class", unless any particular "Parameterized Constructor" of the "Parent Class" is explicitly called
 }

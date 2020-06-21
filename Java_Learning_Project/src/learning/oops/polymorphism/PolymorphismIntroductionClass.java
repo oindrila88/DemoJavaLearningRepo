@@ -9,7 +9,7 @@ public class PolymorphismIntroductionClass
 	
 	//Polymorphism - "Polymorphism" is an "Object Oriented Programming" feature that allows to perform a single action in different ways
 	//Types of Polymorphism -
-	//1. Compile-Time Polymorphism - "Polymorphism" that is resolved during "Compile-Time" is known as "Compile-Time Polymorphism", or, "Static Polymorphism". "Method Overloading" can be considered as Compile-Time Polymorphism
+	//1. Compile-Time Polymorphism - "Polymorphism" that is resolved during "Compile-Time" is known as "Compile-Time Polymorphism", or, "Static Polymorphism". "Method Overloading" can be considered as "Compile-Time Polymorphism"
 	//Method Overloading - "Method Overloading" allows to have more than one "Methods" with same "Name" in a Class that differs in "Signature"
 	//"Method Overloading" of Instance Methods
 	public void setAandB(int a, double d)
@@ -82,4 +82,5 @@ public class PolymorphismIntroductionClass
 		x = n;
 	}
 	*/
+	//2. Run-Time Polymorphism - "Polymorphism" that is resolved during "Run-Time" is known as "Run-Time Polymorphism", or, "Dynamic Polymorphism". "Method Overriding" can be considered as "Run-Time Polymorphism"
 }

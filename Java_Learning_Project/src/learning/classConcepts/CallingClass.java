@@ -49,8 +49,11 @@ public class CallingClass
 		
 		//Create an Object of the Class "ConstructorIntroductionClass" using the "Constructor" that takes an int Parameter
 		ConstructorIntroductionClass objConstruct = new ConstructorIntroductionClass(19.9);
-		ConstructorIntroductionClass objConstruct1 = new ConstructorIntroductionClass(11);
+		objConstruct.displayX();
 		
+		ConstructorIntroductionClass objConstruct1 = new ConstructorIntroductionClass(11);
+		ConstructorIntroductionClass newObj = objConstruct1.returnCurrentInstance();
+		newObj.displayValuesOfCurrentInstance(newObj);
 		/*
 		//If the Constructor of the Class "AccessModifiersIntroductionClass" was made Private, the Compile-Time Error "The constructor AccessModifiersIntroductionClass() is not visible" is Displayed
 		AccessModifiersIntroductionClass obj2 = new AccessModifiersIntroductionClass();

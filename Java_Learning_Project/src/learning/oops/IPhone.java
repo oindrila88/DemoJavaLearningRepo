@@ -1,5 +1,7 @@
 package learning.oops;
 
+import learning.oops.abstraction.interfaceIntroduction.Phone;
+
 public class IPhone implements Phone, MacUpdatePermission
 {
 	@Override
