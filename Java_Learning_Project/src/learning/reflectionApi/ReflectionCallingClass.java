@@ -26,7 +26,7 @@ public class ReflectionCallingClass
 			m.invoke(t, null);
 			
 			//Check if a ".java" file contains a Class, or, an Interface using the "isInterface()" method of the Class "Class"
-			c = Class.forName("learning.oops.Phone");
+			c = Class.forName("learning.oops.abstraction.interfaceIntroduction.Phone");
 			boolean isInterface = c.isInterface();
 			
 			if (isInterface)
@@ -40,7 +40,10 @@ public class ReflectionCallingClass
 			
 			Method[] methods = c.getDeclaredMethods();
 			for (Method mt : methods)
-				System.out.print(mt);
+			{
+				mt.setAccessible(true);
+				System.out.print(mt.getName());
+			}
 			System.out.println();
 		}
 		catch (ClassNotFoundException e)

@@ -61,7 +61,7 @@ public class ThreadCallingClass
 		//Once the job of the Thread is done, it is dead. "isAlive" method checks if a Thread is in running state
 		//Checking the state of "hiThread" Thread, before "join" method would return True
 		//Checking the state of "hiThread" Thread, after "join" method would return False
-		//The "join()" method will put the current Thread, i.e., "Main" Thread, or, any other Thread on wait, until the Thread on which it is called is dead, i.e., completes its execution. If the Thread is "interrupted", then it will through InterruptedException. Once the Thread is completed, the execution of the Program returns to the previous Thread, i.e., "Main" Thread, or, any other Thread
+		//Thread.join() - The "join()" method will put the current Thread, i.e., "Main" Thread, or, any other Thread on wait, until the Thread on which it is called is dead, i.e., completes its execution. If the Thread is "interrupted", then it will throw InterruptedException. Once the Thread is completed, the execution of the Program returns to the previous Thread, i.e., "Main" Thread, or, any other Thread
 		hiThread.join();
 		helloThread.join();
 		System.out.println("Bye");
